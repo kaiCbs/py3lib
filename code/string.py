@@ -1,18 +1,20 @@
 # string: Text Constants and Templates
-
 # The string module dates from the earliest versions of Python. Many of the functions previously
 # implemented in the module have been moved to methods of str objects, but the
 # module retains several useful constants and classes for working with str objects. This discussion
 # will concentrate on them.
 
+
 # ----------------------------------
 # Functions 
-print("\n $1 Functions\n")
 
 import string
+
 s = "This is a sentence without capitalizing words"
+
 print(s)
 print(string.capwords(s))
+
 
 # ----------------------------------
 print("\n $2 Templates\n")
@@ -32,7 +34,6 @@ Variable in text: ${var}iable
 
 print('Template:', t.substitute(values))
 
-
 s = """
 Variable        : %(var)s
 Escape          : %%
@@ -41,7 +42,6 @@ Variable in text: %(var)siable
 
 print("INTERPOLATION:", s % values)
 
-
 s = """
 Variable        : {var}
 Escape          : {{}}
@@ -49,7 +49,6 @@ Variable in text: {var}iable
 """
 
 print("FORMAT:", s.format(**values))
-
 
 # One key difference between templates and string interpolation or formatting is that the
 # type of the arguments is not taken into account. The values are converted to strings, and
@@ -72,7 +71,6 @@ class MyTemplate(string.Template):
     delimiter = "%"
     idpattern = "[a-z]+_[a-z]+" 
 
-
 template_text = """
   Delimiter : %%
   Replaced  : %with_underscore
@@ -87,7 +85,6 @@ d = {
 t = MyTemplate(template_text)
 
 print("Modifed ID pattern:\n", t.safe_substitute(d))
-
 
 # For even more complex changes, it is possible to override the pattern attribute and define
 # an entirely new regular expression. The pattern provided must contain four named groups
@@ -114,4 +111,8 @@ print("\n $3 Formatter\n")
 print("\n $3 Constants\n")
 # Constants
 
-for 
+for attr in dir(string):
+    value = getattr(string,attr)
+    if isinstance(value, str) and not attr.startswith("_"):
+        print(attr, value)
+    
