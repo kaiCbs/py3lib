@@ -17,7 +17,6 @@ print(string.capwords(s))
 
 
 # ----------------------------------
-print("\n $2 Templates\n")
 # Templates
 # String templates were added as part of PEP 2921 and are intended as an alternative to the
 # built-in interpolation syntax. With string.Template interpolation, variables are identified
@@ -61,7 +60,6 @@ print("safe_substitute():", t.safe_substitute(values))
 
 
 # ----------------------------------
-print("\n $3 Advanced Templates\n")
 # Advanced Templates
 # The default syntax for string.Template can be changed by adjusting the regular expression
 # patterns it uses to find the variable names in the template body. A simple way to do that
@@ -96,7 +94,6 @@ print("Pattern: ",string.Template('$var').pattern.pattern)
 
 
 # ----------------------------------
-print("\n $3 Formatter\n")
 # Formatter
 # The Formatter class implements the same layout specification language as the format()
 # method of str. Its features include type coersion, alignment, attribute and field references,
@@ -108,7 +105,6 @@ print("\n $3 Formatter\n")
 
 
 # ----------------------------------
-print("\n $3 Constants\n")
 # Constants
 
 for attr in dir(string):
