@@ -1,5 +1,3 @@
-import textwrap
-
 # textwrap: Formatting Text Paragraphs
 # The textwrap module can be used to format text for output in situations where prettyprinting
 # is desired. It offers programmatic functionality similar to the paragraph wrapping
@@ -11,7 +9,7 @@ sample_text = """
     features found in many text editors and word processors.
 """
 
-
+import textwrap
 # ----------------------------------
 # Filling Paragraphs
 
