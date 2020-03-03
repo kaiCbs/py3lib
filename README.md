@@ -11,3 +11,4 @@
 ### Data Structures
 
 - [enum: Enumeration Type](https://github.com/kaiCbs/py3lib/blob/master/code/enum.py)
+- [collections: Container Data Types](https://github.com/kaiCbs/py3lib/blob/master/code/collections.py)
