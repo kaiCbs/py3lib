@@ -73,4 +73,111 @@ print(letters)
 # shows the standard operators for creating new Counter instances, but the in-place 
 # operators +=, -=, &=, and |= are also supported.
 
-# TODO: defaultdict, deque, namedtuple, OrderedDict, collections.abc
+
+# ----------------------------------
+# defaultdict: Missing Keys Return a Default Value
+# The standard dictionary includes the method setdefault() for retrieving a value and establishing 
+# a default if the value does not exist. By contrast, defaultdict lets the caller specify the 
+# default up front when the container is initialized. To create such a "default" item, it calls the 
+# function object that you pass to the constructor (more precisely, it's an arbitrary "callable" 
+# object, which includes function and type objects)
+
+d = collections.defaultdict(int)
+for l in "This is a document and this document has a owner and a keeper".split():
+    d[l]+=1
+print(d)
+
+
+# ----------------------------------
+# deque: Double-Ended Queue
+# A double-ended queue, or deque, supports adding and removing elements from either end of the queue. 
+# The more commonly used stacks and queues are degenerate forms of deques, where the inputs and 
+# outputs are restricted to a single end.
+
+d = collections.deque([7,11,13])
+
+# A deque can be populated from either end, termed “left” and “right” in the Python implementation.
+# The extendleft() function iterates over its input and performs the equivalent of an appendleft() 
+# for each item. The end result is that the deque contains the input sequence in reverse order.
+
+d.extend([17,19])
+print(d)
+d.append(23)
+print(d)
+d.extendleft([5,3])
+print(d)
+d.appendleft(2)
+print(d)
+
+# Similarly, the elements of the deque can be consumed from both ends or either end, depending 
+# on the algorithm being applied. deques are thread-safe, the contents can even be consumed from 
+# both ends at the same time from separate threads.
+
+print(d.pop(), d.pop(), d.popleft())
+
+# Another useful aspect of the deque is the ability to rotate it in either direction, so as to 
+# skip over some items.
+
+d.rotate(2)
+print(d)
+
+# A deque instance can be configured with a maximum length so that it never grows beyond that size. 
+# When the queue reaches the specified length, existing items are discarded as new items are added. 
+# This behavior is useful for finding the last n items in a stream of undetermined length.
+
+d = collections.deque(maxlen=5)
+for i in range(100):
+    if i % 7 == 0:
+        d.append(i)
+print(d)
+
+
+# ----------------------------------
+# namedtuple: Tuple Subclass with Named Fields
+# namedtuple instances are just as memory efficient as regular tuples because they do not have 
+# per-instance dictionaries. Each kind of namedtuple is represented by its own class, which is 
+# created by using the namedtuple() factory function. The arguments are the name of the new class 
+# and a string containing the names of the elements.
+
+# Field names are invalid if they are repeated or conflict with Python keywords.
+
+Person = collections.namedtuple('Person', 'name age')
+student = Person(name="Mike", age=20)
+print(student)
+print('{} is {} years old'.format(*student))
+print('{} is {} years old'.format(student[0], student[1]))
+
+# namedtuple provides several useful attributes and methods for working with subclasses and instances. 
+# All of these built-in properties have names prefixed with an underscore (_), which by convention in 
+# most Python programs indicates a private attribute. For namedtuple, however, the prefix is intended 
+# to protect the name from collision with user-provided attribute names.
+
+print("Fields: ", student._fields)
+print("Fields: ", student._asdict())
+student2 = student._replace(name="Bob")
+print('{} is {} years old'.format(*student2))
+
+
+# ----------------------------------
+# OrderedDict: Remember the Order Keys Are Added to a Dictionary
+# An OrderedDict is a dictionary subclass that remembers the order in which its contents are added.
+
+d = collections.OrderedDict()
+for i in "abcdefghi":
+    d[i] = i.upper()
+print(d.keys())
+
+# A regular dict looks at its contents when testing for equality. An OrderedDict also considers the 
+# order in which the items were added.
+
+d1 = collections.OrderedDict(a=1,b=2)
+d2 = collections.OrderedDict(b=2,a=1)
+print(d1==d2)
+
+d.move_to_end("a")
+print(d.keys())
+
+# The collections.abc module contains abstract base classes that define the APIs for container data 
+# structures built into Python and provided by the collections module. 
+
+print([attr for attr in dir(collections.abc) if not attr.startswith("_")])
