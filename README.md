@@ -12,3 +12,5 @@
 
 - [enum: Enumeration Type](https://github.com/kaiCbs/py3lib/blob/master/code/enum.py)
 - [collections: Container Data Types](https://github.com/kaiCbs/py3lib/blob/master/code/collections.py)
+- [array: Sequence of Fixed-Type Data](https://github.com/kaiCbs/py3lib/blob/master/code/array.py)
+- [heapq: Heap Sort Algorithm](https://github.com/kaiCbs/py3lib/blob/master/code/heapq.py)
