@@ -14,3 +14,4 @@
 - [collections: Container Data Types](https://github.com/kaiCbs/py3lib/blob/master/code/collections.py)
 - [array: Sequence of Fixed-Type Data](https://github.com/kaiCbs/py3lib/blob/master/code/array.py)
 - [heapq: Heap Sort Algorithm](https://github.com/kaiCbs/py3lib/blob/master/code/heapq.py)
+- [bisect: Maintain Lists in Sorted Order](https://github.com/kaiCbs/py3lib/blob/master/code/bisect.py)
