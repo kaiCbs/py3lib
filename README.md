@@ -16,3 +16,4 @@
 - [heapq: Heap Sort Algorithm](https://github.com/kaiCbs/py3lib/blob/master/code/heapq.py)
 - [bisect: Maintain Lists in Sorted Order](https://github.com/kaiCbs/py3lib/blob/master/code/bisect.py)
 - [queue: Thread-Safe FIFO Implementation](https://github.com/kaiCbs/py3lib/blob/master/code/queue.py)
+- [struct: Binary Data Structures](https://github.com/kaiCbs/py3lib/blob/master/code/struct.py)
