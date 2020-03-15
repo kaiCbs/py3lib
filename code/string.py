@@ -6,7 +6,7 @@
 
 
 # ----------------------------------
-# Functions 
+# Functions
 
 import string
 
@@ -25,13 +25,15 @@ print(string.capwords(s))
 
 values = {"var": "foo"}
 
-t = string.Template("""
+t = string.Template(
+    """
 Variable        : $var
 Escape          : $$
 Variable in text: ${var}iable
-""")
+"""
+)
 
-print('Template:', t.substitute(values))
+print("Template:", t.substitute(values))
 
 s = """
 Variable        : %(var)s
@@ -65,9 +67,11 @@ print("safe_substitute():", t.safe_substitute(values))
 # patterns it uses to find the variable names in the template body. A simple way to do that
 # is to change the delimiter and idpattern class attributes.
 
+
 class MyTemplate(string.Template):
     delimiter = "%"
-    idpattern = "[a-z]+_[a-z]+" 
+    idpattern = "[a-z]+_[a-z]+"
+
 
 template_text = """
   Delimiter : %%
@@ -75,10 +79,7 @@ template_text = """
   Ignored   : %notunderscored
 """
 
-d = {
-    "with_underscore": "replaced",
-    "notunderscored": "not replaced"
-}
+d = {"with_underscore": "replaced", "notunderscored": "not replaced"}
 
 t = MyTemplate(template_text)
 
@@ -89,8 +90,8 @@ print("Modifed ID pattern:\n", t.safe_substitute(d))
 # for capturing the escaped delimiter, the named variable, a braced version of the variable
 # name, and invalid delimiter patterns.
 
-print("Delimiter: ",string.Template('$var').delimiter)
-print("Pattern: ",string.Template('$var').pattern.pattern)
+print("Delimiter: ", string.Template("$var").delimiter)
+print("Pattern: ", string.Template("$var").pattern.pattern)
 
 
 # ----------------------------------
@@ -108,7 +109,6 @@ print("Pattern: ",string.Template('$var').pattern.pattern)
 # Constants
 
 for attr in dir(string):
-    value = getattr(string,attr)
+    value = getattr(string, attr)
     if isinstance(value, str) and not attr.startswith("_"):
         print(attr, value)
-    
