@@ -21,5 +21,6 @@ Last Update 2020.3.20
 
 ### Algorithm
 
-- [itertools.py](https://github.com/kaiCbs/py3lib/blob/master/code/itertools.py)
-- [operator.py](https://github.com/kaiCbs/py3lib/blob/master/code/operator.py)
+- [itertools: Iterator Functions](https://github.com/kaiCbs/py3lib/blob/master/code/itertools.py)
+- [operator: Functional Interface to Built-in Operators](https://github.com/kaiCbs/py3lib/blob/master/code/operator.py)
+- [contextlib: Context Manager Utilities](https://github.com/kaiCbs/py3lib/blob/master/code/contextlib.py)
