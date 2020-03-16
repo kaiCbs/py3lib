@@ -13,5 +13,12 @@
         "test_*.py"
     ],
     "python.testing.promptToConfigure": false,
+<<<<<<< HEAD
     "python.pythonPath": "/home/kai/anaconda3/bin/python"
+=======
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": true
+>>>>>>> 3909fcbac13e54c8047125f52599116d02e85887
 }

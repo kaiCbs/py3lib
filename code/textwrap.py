@@ -10,6 +10,7 @@ sample_text = """
 """
 
 import textwrap
+
 # ----------------------------------
 # Filling Paragraphs
 
@@ -19,9 +20,9 @@ print(textwrap.fill(sample_text, width=50))
 
 # ----------------------------------
 # Removing Existing Indentation
-# Removing the common whitespace prefix from all of the lines in the sample text with dedent() 
-# produces better results and allows the use of docstrings or embedded multiline strings straight 
-# from Python code while removing the formatting of the code itself. 
+# Removing the common whitespace prefix from all of the lines in the sample text with dedent()
+# produces better results and allows the use of docstrings or embedded multiline strings straight
+# from Python code while removing the formatting of the code itself.
 
 denteded = textwrap.dedent(sample_text)
 print(denteded)

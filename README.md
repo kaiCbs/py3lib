@@ -1,4 +1,5 @@
 ## Notes and examples of Python3 Standard Library
+
 Last Update 2020.3.20
 
 ### Text
@@ -17,3 +18,9 @@ Last Update 2020.3.20
 - [bisect: Maintain Lists in Sorted Order](https://github.com/kaiCbs/py3lib/blob/master/code/bisect.py)
 - [queue: Thread-Safe FIFO Implementation](https://github.com/kaiCbs/py3lib/blob/master/code/queue.py)
 - [struct: Binary Data Structures](https://github.com/kaiCbs/py3lib/blob/master/code/struct.py)
+
+### Algorithm
+
+- [itertools: Iterator Functions](https://github.com/kaiCbs/py3lib/blob/master/code/itertools.py)
+- [operator: Functional Interface to Built-in Operators](https://github.com/kaiCbs/py3lib/blob/master/code/operator.py)
+- [contextlib: Context Manager Utilities](https://github.com/kaiCbs/py3lib/blob/master/code/contextlib.py)
