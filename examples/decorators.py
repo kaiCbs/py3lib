@@ -1,5 +1,6 @@
 import time
 import math
+import inspect
 
 
 def timeit(func):
@@ -23,6 +24,35 @@ def primes(n):
     return [2] + [i for i in range(3, n, 2) if sieve[i]]
 
 
-for i in range(1, 9):
+for i in range(1, 4):
     print("There are %d primes within %d" % (len((primes(10 ** i))), 10 ** i))
 
+
+# The syntax for decorators with arguments is a bit different - the decorator
+# with arguments should return a function that will take a function and return
+# another function. So it should really return a normal decorator.
+
+
+def repeating(repeat):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            result = func(*args, **kwargs)
+            for i in range(repeat):
+                print(
+                    "The answer of %s is"
+                    % (func.__name__ + str(inspect.signature(func))),
+                    result,
+                )
+            return result
+
+        return wrapper
+
+    return decorator
+
+
+@repeating(5)
+def pow(x, n):
+    return x ** n
+
+
+pow(4, 4)
