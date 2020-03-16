@@ -12,6 +12,6 @@
         "-p",
         "test_*.py"
     ],
-    "python.testing.promptToConfigure": true,
+    "python.testing.promptToConfigure": false,
     "python.pythonPath": "/home/kai/anaconda3/bin/python"
 }
