@@ -31,3 +31,8 @@ Last Update 2020.3.20
 - [time: Clock Time](https://github.com/kaiCbs/py3lib/blob/master/code/time.py)
 - [datetime: Date and Time Value Manipulation](https://github.com/kaiCbs/py3lib/blob/master/code/datetime.py)
 - [calendar: Work with Dates](https://github.com/kaiCbs/py3lib/blob/master/code/calendar.py)
+
+### Mathematics
+
+- [decimal: Fixed- and Floating-Point Math](https://github.com/kaiCbs/py3lib/blob/master/code/decimal.py)
+- [fractions: Rational Numbers](https://github.com/kaiCbs/py3lib/blob/master/code/fractions.py)
