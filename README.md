@@ -36,3 +36,8 @@ Last Update 2020.3.20
 
 - [decimal: Fixed- and Floating-Point Math](https://github.com/kaiCbs/py3lib/blob/master/code/decimal.py)
 - [fractions: Rational Numbers](https://github.com/kaiCbs/py3lib/blob/master/code/fractions.py)
+- [# random: Pseudorandom Number Generators](https://github.com/kaiCbs/py3lib/blob/master/code/random.py)
+
+### The File System
+
+- [os.path: Platform-Independent Manipulation of Filenames](https://github.com/kaiCbs/py3lib/blob/master/code/os.path.py)
