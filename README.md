@@ -44,3 +44,4 @@ Last Update 2020.3.20
 - [pathlib: File System Paths](https://github.com/kaiCbs/py3lib/blob/master/code/pathlib.py)
 - [glob: Filename Pattern Matching](https://github.com/kaiCbs/py3lib/blob/master/code/glob.py)
 - [fnmatch: Unix-Style Glob Pattern Matching](https://github.com/kaiCbs/py3lib/blob/master/code/fnmatch.py)
+- [linecache: Read Text Files Efficiently](https://github.com/kaiCbs/py3lib/blob/master/code/linecache.py)
