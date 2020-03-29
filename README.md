@@ -45,3 +45,4 @@ Last Update 2020.3.20
 - [glob: Filename Pattern Matching](https://github.com/kaiCbs/py3lib/blob/master/code/glob.py)
 - [fnmatch: Unix-Style Glob Pattern Matching](https://github.com/kaiCbs/py3lib/blob/master/code/fnmatch.py)
 - [linecache: Read Text Files Efficiently](https://github.com/kaiCbs/py3lib/blob/master/code/linecache.py)
+- [tempfile: Temporary File System Objects](https://github.com/kaiCbs/py3lib/blob/master/code/tempfile.py)
