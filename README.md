@@ -41,3 +41,4 @@ Last Update 2020.3.20
 ### The File System
 
 - [os.path: Platform-Independent Manipulation of Filenames](https://github.com/kaiCbs/py3lib/blob/master/code/os.path.py)
+- [pathlib: File System Paths](https://github.com/kaiCbs/py3lib/blob/master/code/pathlib.py)
