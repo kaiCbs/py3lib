@@ -37,7 +37,7 @@ def repeating(repeat):
     def decorator(func):
         def wrapper(*args, **kwargs):
             result = func(*args, **kwargs)
-            for i in range(repeat):
+            for _ in range(repeat):
                 print(
                     "The answer of %s is"
                     % (func.__name__ + str(inspect.signature(func))),
